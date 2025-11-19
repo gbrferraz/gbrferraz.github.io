@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const mainImage = document.getElementById("main-image");
   const thumbnails = document.querySelectorAll(".thumbnail");
 
-  thumbnails[0].classList.add("active-thumb");
+  if (thumbnails.length > 0) {
+    thumbnails[0].classList.add("active-thumb");
+  };
 
   thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener("click", function() {
