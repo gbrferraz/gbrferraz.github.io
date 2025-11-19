@@ -2,7 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
   const headerPlaceholder = document.getElementById("header-placeholder");
   const footerPlaceholder = document.getElementById("footer-placeholder");
 
-  fetch("nav.html")
+  const mainImage = document.getElementById("main-image");
+  const thumbnails = document.querySelectorAll(".thumbnail");
+
+  thumbnails[0].classList.add("active-thumb");
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener("click", function() {
+      thumbnails.forEach(thumbnail => {
+        thumbnail.classList.remove("active-thumb");
+      });
+      thumbnail.classList.add("active-thumb");
+      mainImage.src = thumbnail.src;
+    });
+  });
+
+  fetch("/nav.html")
     .then(response => response.text())
     .then(data => {
       headerPlaceholder.innerHTML = data;
@@ -19,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
 
-  fetch("footer.html")
+  fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
       footerPlaceholder.innerHTML = data;
