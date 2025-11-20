@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
 
 body {
-  background-color: #333;
+  background-color: #1c1c1c;
   color: #eee;
   max-width: 1000px;
   min-height: 100vh;
@@ -35,18 +35,26 @@ main {
 }
 
 section {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 footer {
   text-align: center;
 }
 
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 10px 0;
+}
+
 footer img {
   width: 24px;
   height: 24px;
   filter: invert(1);
-  margin: 0 8px;
 }
 
 .project-grid {
@@ -79,6 +87,8 @@ footer img {
 .project-card img {
   width: 100%;
   border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .project-card a {
@@ -92,44 +102,66 @@ footer img {
 }
 
 .game-page {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 16px;
+  gap: 24px;
 }
 
 .game-sidebar {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .game-sidebar h1 {
   margin: 0;
+  line-height: 1;
 }
 
 .game-sidebar p {
+  margin: 0;
   flex-grow: 1;
+}
+
+.game-sidebar img {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 .game-details ul {
   list-style-type: none;
   padding-left: 0;
+  background-color: #282828;
+  border-radius: 8px;
 }
 
 .game-details li {
-  background-color: #555;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 12px;
+  border-bottom: solid #1c1c1c 1px;
+}
+
+.game-details li:last-child {
+  border: none;
+}
+
+.game-details span {
+  margin-left: auto;
+  background-color: #708a5a;
+  border-radius: 8px;
   padding: 8px;
-  margin-bottom: 8px;
-  border-radius: 4px;
 }
 
 .game-sidebar button {
-  font-size: 24px;
+  font-size: 28px;
   width: 100%;
   height: 60px;
-  background-color: orangered;
+  background-color: #708a5a;
   color: white;
   font-weight: bold;
-  padding: 4px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -141,8 +173,10 @@ footer img {
 
 #main-image {
   width: 100%;
-  max-height: 400px;
+  aspect-ratio: 16 / 9;
+  background-color: black;
   border-radius: 8px;
+  object-fit: contain;
   display: block;
 }
 
@@ -168,6 +202,13 @@ footer img {
 
 .active-thumb {
   opacity: 1;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  padding-right: 12px;
 }
 
 @media (max-width:800px) {
