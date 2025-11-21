@@ -108,6 +108,10 @@ footer img {
   gap: 24px;
 }
 
+.game-content {
+  min-width: 0;
+}
+
 .game-sidebar {
   display: flex;
   flex-direction: column;
@@ -182,6 +186,7 @@ footer img {
 
 .thumbnail-bar {
   display: flex;
+  overflow-x: auto;
   gap: 8px;
   margin-top: 8px;
 }
@@ -189,6 +194,7 @@ footer img {
 .thumbnail {
   width: 100px;
   height: 60px;
+  flex-shrink: 0;
   object-fit: cover;
   border-radius: 4px;
   cursor: pointer;
