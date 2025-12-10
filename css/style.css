@@ -140,12 +140,20 @@ footer img {
   border-radius: 8px;
 }
 
+.game-details h3 {
+  padding-top: 8px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
 .game-details li {
   display: flex;
   align-items: center;
   flex-direction: row;
   padding: 12px;
   border-bottom: solid #1c1c1c 1px;
+  gap: 8px;
 }
 
 .game-details li:last-child {
@@ -157,9 +165,11 @@ footer img {
   background-color: #708a5a;
   border-radius: 8px;
   padding: 8px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.game-sidebar button {
+.game-sidebar a {
   font-size: 28px;
   width: 100%;
   height: 60px;
@@ -169,10 +179,14 @@ footer img {
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
-.game-sidebar button:hover {
-  filter: brightness(1.5);
+.game-sidebar a:hover {
+  filter: brightness(1.2);
 }
 
 #main-image {
@@ -215,7 +229,6 @@ footer img {
   width: 24px;
   height: 24px;
   filter: invert(1);
-  padding-right: 12px;
 }
 
 /* BLOG */
@@ -226,7 +239,7 @@ footer img {
   background-color: #282828;
   border-radius: 8px;
   gap: 16px;
-  padding: 8px;
+  padding: 16px;
 }
 
 .blog-link {
@@ -243,6 +256,11 @@ footer img {
 
 .blog-text {
   flex: 1;
+  padding-left: 8px;
+}
+
+.blog-text h1 {
+  margin: 0;
 }
 
 .article-content {
